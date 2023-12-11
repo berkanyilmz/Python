@@ -32,7 +32,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Ekle</string>
+     <string>Add</string>
     </property>
    </widget>
    <widget class="QLabel" name="find_info">
@@ -69,7 +69,7 @@
      <bool>false</bool>
     </property>
     <property name="text">
-     <string>Yenile</string>
+     <string>Refresh</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
