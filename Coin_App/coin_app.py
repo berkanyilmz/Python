@@ -68,5 +68,5 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Coin App"))
-        self.coin_add.setText(_translate("MainWindow", "Ekle"))
-        self.fresh_table.setText(_translate("MainWindow", "Yenile"))
+        self.coin_add.setText(_translate("MainWindow", "Add"))
+        self.fresh_table.setText(_translate("MainWindow", "Refresh"))
