@@ -20,10 +20,3 @@ class Api:
     self.response = self.session.get(self.api_url, params=self.parameters)
     self.json_data = self.response.json()
     return self.json_data
-
-
-#print(json_data['data'][0]['symbol'])
-#coin bulma
-#for i in range(100):
-#    if (json_data['data'][i]['symbol'] == 'LEO'):
-#        print(json_data['data'][i])
