@@ -136,7 +136,7 @@ class App(QtWidgets.QMainWindow):
         if self.is_exist(share_code):
             avg, quantity = next(((s.average, s.share_quantity) for s in self.shares_list if share_code == s.share_code), (0, 0))
             old_cost = avg * quantity
-            new_cost = int(self.ui.cost_text.text()) * int(self.ui.quantity_text.text())
+            new_cost = float(self.ui.cost_text.text()) * float(self.ui.quantity_text.text())
             new_quantity = quantity + int(self.ui.quantity_text.text())
             new_avg = (old_cost + new_cost) / new_quantity
             #next((s.update(new_avg, new_quantity) for s in self.shares_list if share_code == s.share_code), None)
