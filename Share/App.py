@@ -78,8 +78,15 @@ class App(QtWidgets.QMainWindow):
                 self.ui.tableWidget.setItem(row, 5, QtWidgets.QTableWidgetItem(str(self.pl(share_name, share_cost))))
             time.sleep(1)
             self.color_table()
+            self.total_profit()
 
+    def total_profit(self):
+        total = 0.0
+        for row in range(self.row_index):
+            total += float(self.ui.tableWidget.item(row, 5).text())
 
+        self.ui.profit_label.setText('Total Profit : ' + str(total))
+    
     def color_table(self):
         for row in range(self.row_index):
             self.ui.tableWidget.item(row,2).setBackground(QColor(255,0,0)) if float(self.ui.tableWidget.item(row, 2).text().replace(',', '.')) < 0 else self.ui.tableWidget.item(row,2).setBackground(QColor(0,255,0))
